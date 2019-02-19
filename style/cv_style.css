@@ -1,0 +1,125 @@
+*, *::before, *::after {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html, body {
+    height:100vh;
+}
+
+body { 
+    align-items:center;
+    justify-content:center;
+    padding: 5px 40px;
+    font:14px/1.5 'Open Sans',sans-serif;
+    color:#345;
+    background:#f0f2f4;
+}
+
+p:not(:last-child) {
+  margin: 0 0 20px;
+}
+
+main {
+  min-width: 185px;
+  padding: 40px;
+  border: 1px solid rgba(0,0,0,.2);
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  margin: auto;
+}
+
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #abc;
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #abc;
+  border: 1px solid transparent;
+}
+
+label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+label:hover {
+  color: #789;
+  cursor: pointer;
+}
+
+input:checked + label {
+  color: #0af;
+  border: 1px solid #abc;
+  border-top: 2px solid #0af;
+  border-bottom: 1px solid #fff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2 {
+  display: block;
+}
+
+@media screen and (max-width: 800px) {
+  label {
+    font-size: 11px;
+  }
+  label:before {
+    margin: 0;
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  label {
+    padding: 5px;
+  }
+}
+
+hr {
+    padding: 1px;
+    background-color: rgb(65, 82, 100);
+    border: 0px;
+    border-radius: 10%;
+    margin: 2% 1%;
+    min-width: 185px;
+}
+
+#profile-pic {
+    width: 15%;
+    display: inline-block;
+    padding: 5px;
+}
+
+#profile-pic img {
+    width: 100%;
+    border-radius: 50%;
+    min-width: 52px;
+}
+
+#name {
+    padding: 2px 2% 10px 2%;
+    display: inline-block;
+}
+
+.details {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+#content1 {
+  padding: 10px;
+}
